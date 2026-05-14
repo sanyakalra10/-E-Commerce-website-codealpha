@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login / Register - TechBazaar India</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <h1>🛒 TechBazaar India</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+    </div>
+  </nav>
+</header>
+
+<main class="auth-page">
+  <div class="auth-card">
+    <div class="auth-tabs">
+      <button id="tabLogin" class="auth-tab active">Login</button>
+      <button id="tabRegister" class="auth-tab">Register</button>
+    </div>
+
+    <div id="authMessage" class="auth-message"></div>
+
+    <form id="loginForm" class="auth-form">
+      <h2>Welcome back</h2>
+      <label>
+        Email
+        <input type="email" id="loginEmail" required />
+      </label>
+      <label>
+        Password
+        <input type="password" id="loginPassword" required />
+      </label>
+      <button type="submit" class="btn auth-btn">Login</button>
+    </form>
+
+    <form id="registerForm" class="auth-form hidden">
+      <h2>Create an account</h2>
+      <label>
+        Name
+        <input type="text" id="registerName" required />
+      </label>
+      <label>
+        Email
+        <input type="email" id="registerEmail" required />
+      </label>
+      <label>
+        Password
+        <input type="password" id="registerPassword" required minlength="6" />
+      </label>
+      <button type="submit" class="btn auth-btn">Register</button>
+    </form>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+  updateCartCount();
+  setupAuthPage();
+</script>
+</body>
+</html>

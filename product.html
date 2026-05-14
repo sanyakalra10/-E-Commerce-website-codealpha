@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🛒 TechStore</h1>
+            <div class="nav-links">
+                <a href="index.html">← Back to Products</a>
+                <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="product-detail">
+        <div class="product-info" id="productInfo">
+            <div class="loading">Loading product...</div>
+        </div>
+        <div class="add-to-cart-section">
+            <button class="btn-add-cart" id="addToCartBtn">Add to Cart</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+        loadProductDetails(productId);
+        updateCartCount();
+    </script>
+</body>
+</html>

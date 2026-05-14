@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Cart - TechBazaar India</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <h1>🛒 TechBazaar India</h1>
+    <div class="nav-links">
+      <a href="index.html">← Continue Shopping</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <span id="userArea"></span>
+    </div>
+  </nav>
+</header>
+
+<main class="cart-page">
+  <h2>Your Cart</h2>
+  <div id="cartItems">Your cart is empty</div>
+  <div class="cart-total" id="cartTotal">
+    <h3>Total: <span id="totalAmount">₹0</span></h3>
+    <button class="btn btn-checkout" id="checkoutBtn" style="display:none;">
+      Proceed to Checkout
+    </button>
+  </div>
+</main>
+
+<script src="script.js"></script>
+<script>
+  updateCartCount();
+  loadCartDemo();
+</script>
+</body>
+</html>
